@@ -5,10 +5,14 @@
 
 This project was inspired by a Angular presentation given by Patrick Persson (patrick.persson@cenito.se) and it is used to scan all elements and identify scope property errors. 
 
+## How to use
+
+For the moment the debugging information apears in the console. 
 
 ## Future plans
 
 * __[WIP]__ Add tests
+* __[WIP]__ Use style to debug
 * __[ONGOING]__ Improve code quality
 * __[WIP]__ Add Gulp/Grunt workflows -- probably Gulp.
 
