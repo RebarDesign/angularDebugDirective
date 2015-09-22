@@ -9,6 +9,8 @@ This project was inspired by a Angular presentation given by Patrick Persson (pa
 
 For the moment the debugging information apears in the console. 
 
+The console will point out some misspellings, as well as the code line they are found in. Once you indentify the errors and fix them, the app should work fine :D 
+
 ## Future plans
 
 * __[WIP]__ Add tests
