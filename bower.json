@@ -1,0 +1,29 @@
+{
+  "name": "angularDebugDirective",
+  "version": "0.0.1",
+  "homepage": "https://github.com/RebarDesign/angularDebugDirective",
+  "description": "An angular directive used to debug applications",
+  "main": "app.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "angular",
+    "directive",
+    "debug"
+  ],
+  "authors": [
+    "Sebastian Florian (@SebFlorian)"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.6"
+  }
+}
