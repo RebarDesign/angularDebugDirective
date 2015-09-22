@@ -1,7 +1,4 @@
 # angularDebugDirective
-
-
-# angularDebugDirective
 ### A Directive used to Debugg JavaScript and AngularJS Applications
 
 > GitHub repository: [https://github.com/RebarDesign/angularDebugDirective](https://github.com/RebarDesign/angularDebugDirective)
