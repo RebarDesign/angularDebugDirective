@@ -23,14 +23,25 @@ function debug() {
         console.info('found ' + modelElements.length + ' model elements');
         
         angular.forEach(modelElements, function (me) {
-        $(me).attr("style", "border:1px solid red");
         var modelAttr = $(me).attr('ng-model');
         console.info('=>', modelAttr);
         
         if (_.some(scopeProperties, function(prop) { return prop == modelAttr; })) {
             console.info('scope value for', modelAttr, '=', scope[modelAttr]);
             } else {
-                console.error('missing property in scope: ', modelAttr);
+                
+                var error = 'missing property in scope: ' + modelAttr;
+                
+                $(me)
+                    .addClass( "tooltipped")  
+                    .css({ 'border': "1px solid red" })
+                    .attr({
+                        "data-position": "right",
+                        "data-delay" : "50",
+                        "data-tooltip" : error
+                    });              
+                
+                console.error(error);
             }
         });
         
