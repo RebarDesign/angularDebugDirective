@@ -16,7 +16,7 @@
 
 <body>
     <div class="container" ng-app="app">
-        <div ng-controller="ACtrl" list-errors>
+        <div ng-controller="DebugCtrl" debug>
             <div class="input-group">
                 <label for="name" class="input-group-addon">Your name please:</label>
                 <input id="name" class="form-control" ng-model="naem" />
@@ -31,7 +31,7 @@
                 <input id="search" class="form-control" ng-model="search" />
             </div>
             <div class="list-group">
-                <p class="list-group-item" ng-repeat="fruit in fruist | filter:search">{{fruit}}</p>
+                <p class="list-group-item" ng-repeat="car in cras | filter:search">{{car}}</p>
             </div>
         </div>
     </div>

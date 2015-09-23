@@ -2,15 +2,15 @@
 
 angular
     .module('app')
-    .controller('ACtrl', ACtrl);
+    .controller('DebugCtrl', DebugCtrl);
     
-ACtrl.$inject = ['$scope'];
+DebugCtrl.$inject = ['$scope'];
 
-function ACtrl($scope) { 
+function DebugCtrl($scope) { 
     
     var vm = this;
-    $scope.name = 'world';
-    $scope.fruits = ['banana', 'orange', 'apple', 'mango'];
+    $scope.name = 'Sebastian';
+    $scope.cars = ['bwm', 'tesla', 'audi', 'volvo'];
     
     $scope.activate = activate;
     

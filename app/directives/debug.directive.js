@@ -2,10 +2,10 @@
 
 angular
     .module('app')
-    .directive('listErrors', listErrors);
+    .directive('debug', debug);
     
 
-function listErrors() { 
+function debug() { 
     
     var directive = {
         link : link
@@ -13,13 +13,17 @@ function listErrors() {
     
     function link (scope, element, attr) {
         
+        // returns an array whose elements are strings corresponding to the object scope. 
         var scopeProperties = Object.keys(scope);
+        // debugger;
+        
         console.info('performing error search');
         
         var modelElements = $(element).find('[ng-model]');
         console.info('found ' + modelElements.length + ' model elements');
         
         angular.forEach(modelElements, function (me) {
+        $(me).attr("style", "border:1px solid red");
         var modelAttr = $(me).attr('ng-model');
         console.info('=>', modelAttr);
         
