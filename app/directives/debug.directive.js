@@ -4,10 +4,12 @@ angular
     .module('app')
     .directive('rdDebug', rdDebug);
     
+rdDebug.$inject = [];
+    
 
 function rdDebug() { 
     
-    var directive = {
+    var directive = {   
         link : link
     };
     
@@ -24,6 +26,7 @@ function rdDebug() {
         
         angular.forEach(modelElements, function (me) {
         var modelAttr = $(me).attr('ng-model');
+        
         console.info('=>', modelAttr);
         
         if (_.some(scopeProperties, function(prop) { return prop == modelAttr; })) {

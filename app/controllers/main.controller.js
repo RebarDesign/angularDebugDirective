@@ -8,11 +8,12 @@ DebugCtrl.$inject = ['$scope'];
 
 function DebugCtrl($scope) { 
     
-    var vm = this;
+    // var vm = this;
     
-    vm.name = 'Sebastian';
-    vm.cars = ['bwm', 'tesla', 'audi', 'volvo'];
-    vm.activate = activate;
+    $scope.name = 'Sebastian';
+    $scope.search = '';
+    $scope.cars = ['bwm', 'tesla', 'audi', 'volvo'];
+    $scope.activate = activate;
     
     activate();
     
