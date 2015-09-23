@@ -3,7 +3,7 @@
 
 > GitHub repository: [https://github.com/RebarDesign/angularDebugDirective](https://github.com/RebarDesign/angularDebugDirective)
 
-This project was inspired by a Angular presentation given by Patrick Persson (patrick.persson@cenito.se) and it is used to scan all elements and identify scope property errors. 
+This project is used to scan all elements and identify scope property errors. 
 
 ## How to use
 
