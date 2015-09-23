@@ -9,10 +9,10 @@ DebugCtrl.$inject = ['$scope'];
 function DebugCtrl($scope) { 
     
     var vm = this;
-    $scope.name = 'Sebastian';
-    $scope.cars = ['bwm', 'tesla', 'audi', 'volvo'];
     
-    $scope.activate = activate;
+    vm.name = 'Sebastian';
+    vm.cars = ['bwm', 'tesla', 'audi', 'volvo'];
+    vm.activate = activate;
     
     activate();
     

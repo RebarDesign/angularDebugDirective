@@ -16,10 +16,10 @@
 
 <body>
     <div class="container" ng-app="app">
-        <div ng-controller="DebugCtrl" debug>
+        <div ng-controller="DebugCtrl as vm" rd-debug>
             <div class="input-group">
                 <label for="name" class="input-group-addon">Your name please:</label>
-                <input id="name" class="form-control" ng-model="nmae" />
+                <input id="name" class="form-control" ng-model="vm.name" />
             </div>
             <div class="input-group">
                 <p>Hello {{name}}!</p>
@@ -28,10 +28,10 @@
                 <label for="search" class="input-group-addon"><i class="fa fa-search fa-fw"></i>
     
                 </label>
-                <input id="search" class="form-control" ng-model="search" />
+                <input id="search" class="form-control" ng-model="vm.search" />
             </div>
             <div class="list-group">
-                <p class="list-group-item" ng-repeat="car in cras | filter:search">{{car}}</p>
+                <p class="list-group-item" ng-repeat="car in vm.cars | filter:vm.search">{{car}}</p>
             </div>
         </div>
     </div>
@@ -46,11 +46,12 @@
   <!-- End Vendor -->
   
   <!-- Bootstrapping -->
+  <script src="app/app.module.js"></script>
   
   <!-- Reusable Modules -->
   
   <!-- Core Modules -->
-  <script src="app/app.module.js"></script>
+  <script src="app/core/config.js"></script>
   
   <!-- Controllers -->
   <script src="app/controllers/main.controller.js"></script>

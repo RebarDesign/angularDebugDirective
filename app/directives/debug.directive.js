@@ -2,10 +2,10 @@
 
 angular
     .module('app')
-    .directive('debug', debug);
+    .directive('rdDebug', rdDebug);
     
 
-function debug() { 
+function rdDebug() { 
     
     var directive = {
         link : link
