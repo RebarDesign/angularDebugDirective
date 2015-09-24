@@ -16,22 +16,22 @@
 
 <body>
     <div class="container" ng-app="app">
-        <div ng-controller="DebugCtrl"  rd-debug>
+        <div ng-controller="DebugCtrl as vm" rd-debug>
             <div class="input-group">
                 <label for="name" class="input-group-addon">Your name please:</label>
-                <input id="name" class="form-control" ng-model="name" />
+                <input id="name" class="form-control" ng-model="vm.name" />
             </div>
             <div class="input-group">
-                <p>Hello {{name}}!</p>
+                <p>Hello {{vm.name}}!</p>
             </div>
             <div class="input-group">
                 <label for="search" class="input-group-addon"><i class="fa fa-search fa-fw"></i>
     
                 </label>
-                <input id="search" class="form-control" ng-model="search" />
+                <input id="search" class="form-control" ng-model="vm.search" />
             </div>
             <div class="list-group">
-                <p class="list-group-item" ng-repeat="car in cars | filter:search">{{car}}</p>
+                <p class="list-group-item" ng-repeat="car in vm.cars | filter:vm.search">{{car}}</p>
             </div>
         </div>
     </div>
@@ -53,11 +53,14 @@
   <!-- Core Modules -->
   <script src="app/core/config.js"></script>
   
+  <!-- Factories -->
+  <!--<script src="app/factories/debug.controller.js"></script>-->
+  
   <!-- Controllers -->
-  <script src="app/controllers/main.controller.js"></script>
+  <script src="app/controllers/debug.controller.js"></script>
   
   <!-- Directives -->
-  <script src="app/directives/debug.directive.js"></script>
+  <script src="app/directives/rdDebug.directive.js"></script>
   
   </body>
 </html>
