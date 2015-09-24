@@ -18,7 +18,7 @@
         
         var directive = {   
             link : link,
-            controller: DebugCtrl,
+            controller: 'DebugCtrl',
             controllerAs: 'vm',
             bindToController: true // because the scope is isolated
         };
@@ -29,7 +29,7 @@
         ////////////////////////////
         
         
-        function link (scope, element, attr) {
+        function link (scope, element, attr , vm) {
             
             // returns an array whose elements are strings corresponding to the object scope. 
             var scopeProperties = Object.keys(scope.vm);
@@ -45,7 +45,11 @@
             
             console.info('=>', modelAttr);
             
-            if (_.some(scopeProperties, function(prop) { return prop == modelAttr; })) {
+            if (_.some(scopeProperties, function(prop) { 
+            
+            // TODO Find a more elegant solution to remove 'vm.'
+            return prop == modelAttr.slice(3);; 
+            })) {
                 console.info('scope value for', modelAttr, '=', scope[modelAttr]);
                 } else {
                     
