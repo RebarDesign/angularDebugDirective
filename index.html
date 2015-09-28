@@ -16,7 +16,7 @@
 
 <body>
     <div class="container" ng-app="app">
-        <div ng-controller="DebugCtrl as vm" rd-debug>
+        <div data-ng-controller="DebugCtrl as vm" rd-debug>
             <div class="input-group">
                 <label for="name" class="input-group-addon">Your name please:</label>
                 <input id="name" class="form-control" ng-model="vm.nmae" />
@@ -40,6 +40,7 @@
   
   <!-- Vendor -->
   <script src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-cookies.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="http://underscorejs.org/underscore-min.js"></script>
   <script src="app/materialize.min.js"></script>
@@ -52,6 +53,7 @@
   
   <!-- Core Modules -->
   <script src="app/core/config.js"></script>
+  <script src="app/core/dbg.js"></script>
   
   <!-- Factories -->
   <!--<script src="app/factories/debug.controller.js"></script>-->

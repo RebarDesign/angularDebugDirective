@@ -6,9 +6,8 @@
         .module('app.core', [])
         .value('appValue', appValue)
         .config(['$compileProvider', function config($compileProvider) {
-            
             //  Angular debug mode
-            $compileProvider.debugInfoEnabled(false);
+            $compileProvider.debugInfoEnabled(true);
         }])
     
     var appValue = {
